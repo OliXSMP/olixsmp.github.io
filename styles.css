@@ -11,7 +11,8 @@ body {
 img {
     max-width: 5%; /* Adjust the size as needed */
     height: auto;
-    margin-bottom: 20px; /* Add more margin below the logo */
+    margin-top: 20px; /* Add margin above the logo */
+    margin-bottom: 20px; /* Add margin below the logo */
     border-radius: 10px; /* Set rounded corners */
 }
 
@@ -32,8 +33,13 @@ img {
     cursor: pointer;
     text-decoration: underline;
     font-size: inherit;
+    margin-top: 10px; /* Add margin above the button */
 }
 
 .embed button:hover {
     color: #4CAF50; /* Change text color to green on hover */
+}
+
+.discord-widget {
+    margin-top: 20px; /* Add margin above the Discord widget */
 }
