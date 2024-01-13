@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="olix_smp_logo1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img id="logo" src="olix_smp_logo1.png" alt="OliXSMP Logo">
+
+    <div class="embed" id="embed">
+        <button id="copyButton">
+            <span>OliXSMP.xyz</span>
+        </button>
+    </div>
+
+    <div class="discord-widget">
+        <iframe src="https://discord.com/widget?id=866789346145468416&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+
+    <!-- Add the confetti effect script directly -->
+    <script>
+        const copyButton = document.getElementById('copyButton');
+        const embedText = 'OliXSMP.xyz';
+        let clickCount = 0;
+
+        copyButton.addEventListener('click', () => {
+            // Create a temporary textarea to copy the text
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = embedText;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextarea);
+
+            alert('Text copied to clipboard!');
+        });
+
+        document.getElementById('logo').addEventListener('click', (event) => {
+            clickCount++;
+
+            if (clickCount >= 5) {
+                // Add confetti effect directly
+                for (let i = 0; i < 200; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const velocity = Math.random() * 5 + 5;
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.top = `${event.clientY}px`;
+                    confetti.style.left = `${event.clientX}px`;
+                    confetti.style.width = '10px';
+                    confetti.style.height = '10px';
+                    confetti.style.position = 'absolute';
+                    confetti.style.backgroundColor = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
+                    document.body.appendChild(confetti);
+
+                    // Apply animation
+                    const animation = confetti.animate([
+                        { transform: 'translate(0, 0)' },
+                        { transform: `translate(${Math.cos(angle) * 200}px, ${Math.sin(angle) * 200}px)` },
+                    ], {
+                        duration: 2000,
+                        easing: 'ease-out',
+                        fill: 'forwards',
+                    });
+
+                    // Remove confetti after animation completes
+                    animation.onfinish = () => {
+                        document.body.removeChild(confetti);
+                    };
+                }
+
+                clickCount = 0; // Reset the click count
+            }
+        });
+    </script>
+</body>
+</html>
