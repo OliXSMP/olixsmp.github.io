@@ -50,14 +50,5 @@ img:hover {
     margin-top: 20px; /* Add margin above the Discord widget */
 }
 
-footer {
-    text-align: center;
-    background-color: #282828; /* Match the background color of the .embed */
-    color: white;
-    padding: 10px;
-    width: 100%; /* Make the footer span the entire width */
-    font-family: 'Arial', sans-serif; /* Set the font for the footer */
-}
-
 
 
