@@ -32,6 +32,7 @@ img:hover {
     color: white;
     border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .embed button {
@@ -54,5 +55,5 @@ img:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 220px; /* Adjusted to provide space at the bottom */
+    margin-bottom: 20px; /* Adjusted to provide space at the bottom */
 }
