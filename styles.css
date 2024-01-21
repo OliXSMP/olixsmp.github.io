@@ -9,9 +9,13 @@ body {
     background-color: #111;
 }
 
+h1 {
+    color: white;
+}
+
 img {
-    max-width: 5%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -35,6 +39,29 @@ img:hover {
     margin-bottom: 10px;
 }
 
+.embed2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #282828;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.embed2 button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: inherit;
+    margin-top: 5px;
+}
+
 .embed button {
     background: none;
     border: none;
@@ -49,11 +76,15 @@ img:hover {
     color: #4CAF50;
 }
 
+.twitter-link {
+    color: white;
+}
+
 .discord-widget {
-    margin-top: auto; /* Adjusted to occupy remaining space at the bottom */
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; /* Adjusted to provide space at the bottom */
+    margin-bottom: 20px;
 }

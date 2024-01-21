@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Oliwier Szyszka</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="about-section">
+        <div class="embed2">
+            <h1>About Oliwier Szyszka</h1>
+            <img src="IMG_7097.jpg" alt="Oliwier Szyszka">
+            <p>Oliwier Szyszka is a Polish individual living in the UK. He shares a tiny flat with his three other brothers, facing the challenges of a modest lifestyle. Despite the financial constraints, Oliwier remains resilient and determined.</p>
+            <p>Feel free to connect with Oliwier on his social channels:</p>
+            <a href="https://www.youtube.com/@OliX1o1" target="_blank" class="twitter-link"><button>YouTube</button></a>
+            <button onclick="copyToClipboard('olix1o1')">Discord</button>
+            <a href="https://open.spotify.com/user/l8zg45xn02w6r92nz0mnvn9rb" target="_blank" class="twitter-link"><button>Spotify</button></a>
+            <a href="https://steamcommunity.com/profiles/76561198442809209" target="_blank" class="twitter-link"><button>Steam</button></a>
+            <a href="https://twitter.com/OliX1o1" target="_blank" class="twitter-link"><button>Twitter</button></a>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copied to clipboard: ' + text);
+        }
+    </script>
+</body>
+
+</html>
